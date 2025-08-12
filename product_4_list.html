@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interleaved Draw Tape Bag Machine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header-inner">
+            <div class="header-right pc">
+                <span class="text-links">
+                    <a href="#">Support</a>
+                    <a href="#">Contact us</a>
+                </span> |
+                <span class="lang">EN</span> |
+                <p class="search"><img src="img/search.png" alt="Search Icon"></p>
+            </div>
+            <div class="header-inner">
+                <div class="header-mob">
+                    <div class="hamburger" id="menuToggle">&#9776;</div>
+                    <div class="logo">
+                        <img src="img/logoW.png" alt="LUNGMENG" />
+                    </div>
+                </div>
+                <nav class="main-nav" id="mainNav">
+                    <a href="#" class="active">PRODUCTS</a>
+                    <a href="#">PRODUCTS</a>
+                    <a href="#">ABOUT</a>
+                    <a href="#">GLOBAL PRESENCE</a>
+                    <a href="#">CONTACT</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- 手機側邊欄 -->
+    <div class="mobile-menu" id="mobileMenu">
+        <span id="menuClose" class="close-btn">&times;</span>
+        <nav class="main-nav-mob" id="mainNav">
+            <a href="#" class="active">PRODUCTS</a>
+            <a href="#">SOLUTIONS</a>
+            <a href="#">ABOUT</a>
+            <a href="#">GLOBAL PRESENCE</a>
+            <a href="#">CONTACT</a>
+        </nav>
+        <div class="header-right mob">
+            <p class="text-links"><a href="#">SUPPORT</a>
+            </p>
+            <p class="text-links"><a href="#">CONTACT US</a>
+            </p>
+            <p class="lang">EN</p>
+            <p class="search"><img src="img/search.png" alt="Search Icon"></p>
+        </div>
+    </div>
+
+    <section class="hero">
+        <img src="img/bannerImg.png" alt="">
+    </section>
+
+    <main class="content">
+        <!-- 麵包屑語法修正，需符合seo -->
+        <nav class="breadcrumb" aria-label="Breadcrumb" class="breadcrumb">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/products/converting">Converting</a></li>
+            </ol>
+        </nav>
+        </nav>
+
+        <!-- ====== 首區：T-shirt bag machine（單一） ====== -->
+        <!-- 靜態寫法 -->
+        <!-- <section class="tsb-section" aria-labelledby="tsb-title">
+            <div class="container grid-2">
+                <figure class="media">
+                    
+                    <img src="img/product_4_list/product_4_list_img1.png" alt="T-shirt bag making machine" loading="lazy">
+                </figure>
+
+                <div>
+                    <h2 id="tsb-title" class="heading">T-shirt bag machine</h2>
+                    <ul class="list" role="list">
+                        <li class="item">
+                            <a class="link" href="#t1">
+                                <span class="text">
+                                    Servo-driven t-shirt bag making machine
+                                    <small>(without auto punching system)</small>
+                                </span>
+                                <span class="arrow2" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="24" height="24">
+                                        <path d="M5 12h13M12 5l7 7-7 7" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a class="link" href="#t2">
+                                <span class="text">Fully automatic servo-driven t-shirt bag making machine</span>
+                                <span class="arrow2" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="24" height="24">
+                                        <path d="M5 12h13M12 5l7 7-7 7" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a class="link" href="#t3">
+                                <span class="text">Fully automatic servo-driven triple-lane t-shirt bag making machine
+                                    with hot slit seal &amp; post gusset unit</span>
+                                <span class="arrow2" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="24" height="24">
+                                        <path d="M5 12h13M12 5l7 7-7 7" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- ====== 後續群組（自動交錯背景） ====== -->
+        <!-- JS動態載入 -->
+        <section class="machine-list" id="machineList" aria-label="Bag machines list"></section>
+
+        <!--  -->
+        <section class="applications">
+            <div class="applications-inner">
+                <h3>Applications</h3>
+                <div class="slider-container">
+                    <button class="arrow prev">&#10094;</button>
+
+                    <!-- ✅ 留空容器，JS 會填入 .app-slide -->
+                    <div class="app-slider"></div>
+
+                    <button class="arrow next">&#10095;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 表單 -->
+        <section class="section-req" aria-labelledby="req-title">
+            <h2 id="req-title" class="req-title">Request data sheet</h2>
+            <div class="req-wrap">
+                <!-- 左：表單 -->
+
+                <div>                  
+
+                    <form id="reqForm" class="req-card" novalidate>
+                        <div class="grid-2">
+                            <div class="field floating">
+                                <input id="firstName" name="firstName" type="text" autocomplete="given-name" required
+                                    placeholder=" ">
+                                <label for="firstName">First Name <span class="req-note">*</span></label>
+                                <div class="error-msg" hidden>Please enter your first name.</div>
+                            </div>
+
+                            <div class="field floating">
+                                <input id="lastName" name="lastName" type="text" autocomplete="family-name" required
+                                    placeholder=" ">
+                                <label for="lastName">Last Name <span class="req-note">*</span></label>
+                                <div class="error-msg" hidden>Please enter your last name.</div>
+                            </div>
+
+                            <div class="field floating">
+                                <input id="email" name="email" type="email" autocomplete="email" inputmode="email"
+                                    required placeholder=" ">
+                                <label for="email">E-mail <span class="req-note">*</span></label>
+                                <div class="error-msg" hidden>Please enter a valid email.</div>
+                            </div>
+
+                            <div class="field floating">
+                                <input id="tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required
+                                    placeholder=" ">
+                                <label for="tel">Telephone <span class="req-note">*</span></label>
+                                <div class="error-msg" hidden>Please enter your phone number.</div>
+                            </div>
+
+                            <div class="field floating">
+                                <input id="company" name="company" type="text" autocomplete="organization" required
+                                    placeholder=" ">
+                                <label for="company">Company <span class="req-note">*</span></label>
+                                <div class="error-msg" hidden>Please enter your company.</div>
+                            </div>
+
+                            <div class="field floating">
+                                <input id="country" name="country" type="text" autocomplete="country-name" required
+                                    placeholder=" ">
+                                <label for="country">Country <span class="req-note">*</span></label>
+                                <div class="error-msg" hidden>Please enter your country.</div>
+                            </div>
+                        </div>
+
+
+                        <!-- Type of Business -->
+                        <div class="field" style="margin-top:12px;">
+                            <div class="type-row">
+                                <span class="label">Type of Business :</span>
+
+                                <label class="check"><input type="checkbox" name="biz" value="film">Film
+                                    Manufacturer</label>
+                                <label class="check"><input type="checkbox" name="biz"
+                                        value="machinery">Machinery</label>
+                                <label class="check"><input type="checkbox" name="biz" value="trading">Trading
+                                    Company</label>
+                                <label class="check"><input type="checkbox" name="biz" value="agent">Agent/
+                                    Distributor</label>
+                                <label class="check"><input type="checkbox" name="biz" value="oem">OEM Request</label>
+                            </div>
+                        </div>
+
+                        <!-- Privacy -->
+                        <div class="agree-row">
+                            <label class="check" style="margin-top:4px;">
+                                <input id="agree" type="checkbox" required>
+                            </label>
+                            <div>
+                                I agree to the processing of my details in compliance with the standard
+                                governing <a href="#" target="_blank" rel="noopener">Privacy Policy</a>.<span
+                                    class="req-note">*</span>
+                                <div class="error-msg" id="agreeError" hidden>Please agree to continue.</div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top:16px;">
+                            <button id="btnDownload" class="btn" type="submit" disabled>Download</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 右：檔案預覽 -->
+                <aside class="file-card" aria-label="Data sheet preview">
+                    <!-- 換成你的封面圖 -->
+                    <img src="img/product_4_list/product_4_list_img2.png" alt="Data sheet preview (cover)">
+                </aside>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <img src="img/logoFooter.png" alt="Lungmeng Logo" class="footer-logo" />
+                <div class="footer-contact">
+                    <div class="footer-block">
+                        <div class="footer-links">
+                            <div>
+                                <h4>Headquarters</h4>
+                                <p>Phone: +886-6-232-1126</p>
+                                <p>Email: sales@lm-hq.com</p>
+                                <p>No.20, Huan Kang Rd.,</p>
+                                <p>Yung Kang Ind.</p>
+                                <p>Area, Tainan City 710, Taiwan</p>
+                            </div>
+                            <div>
+                                <h4>Taipei Office</h4>
+                                <p>Phone: +886-2-2897-6599</p>
+                                <p>Email: lmtaipei@ms47.hinet.net</p>
+                                <p>7F., No.12-19, Sec. 2,</p>
+                                <p>Zhongyang S. Rd., Beitou Dist.,</p>
+                                <p>Taipei City 112, Taiwan</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-block">
+                        <div class="footer-links">
+                            <div class="footer-sub-prod">
+                                <h4>PRODUCTS</h4>
+                                <p><a href="#">Extrusion</a></p>
+                                <p><a href="#">Printing</a></p>
+                                <p><a href="#">Converting</a></p>
+                                <p><a href="#">Recycling</a></p>
+                            </div>
+                            <div class="footer-sub-title">
+                                <h4 class="white">SOLUTIONS</h4>
+                                <p class="white">ABOUT US</p>
+                                <p class="white">GLOBAL PRESENCE</p>
+                                <p class="white">SUPPORT</p>
+                                <p class="white">CONTACT US</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="footer-links">
+                <div class="footer-block">
+                    <h4>PRODUCTS</h4>
+                    <p><a href="#">Extrusion</a></p>
+                </div>
+                <div class="footer-block">
+                    <h4>SOLUTIONS</h4>
+                    <p><a href="#">ABOUT US</a></p>
+                </div>
+            </div> -->
+        </div>
+    </footer>
+
+    <script type="module" src="./js/script.js"></script>
+    <script type="module" src="./js/product_4_list.js"></script>
+
+</body>
+
+</html>
