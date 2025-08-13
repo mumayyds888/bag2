@@ -1137,7 +1137,7 @@ select:focus {
     grid-auto-rows: auto;
     gap: 12px 28px;
     align-items: start;
-    padding: 12px 14px;
+    padding: 22px 24px;
     border: 2px solid var(--line, #d9dde3);
 
 }
@@ -1294,7 +1294,7 @@ select:focus {
     background: var(--brand);
     color: #000;
     font-weight: 700;
-    padding: 12px 22px;
+    padding: 20px 22px;
     cursor: pointer;
     min-width: 160px;
     font-size: 16px;
