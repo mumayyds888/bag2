@@ -865,6 +865,7 @@ video {
     grid-template-columns: 1.1fr 1fr;
     gap: clamp(20px, 4vw, 48px);
     align-items: start;
+    margin: 0 0 2.5rem 0;
 }
 
 .media {
@@ -1026,7 +1027,7 @@ video {
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 14px 60px;
+    gap: 30px 50px;
 }
 
 .grid-1 {
@@ -1056,7 +1057,7 @@ label {
 /* 輸入框要留一點上方空間，讓標籤往上浮時不會擠到字 */
 .field.floating input {
     height: 46px;
-    padding: 18px 12px 8px;
+    padding: 35px 15px 20px;
     box-sizing: border-box;
     /* 不超出容器 */
     /* ↑ 上方多一點 */
@@ -1265,7 +1266,7 @@ select:focus {
     display: flex;
     gap: 12px;
     align-items: flex-start;
-    margin-top: 12px;
+    margin-top: 30px;
 }
 
 .agree-row .check input {
