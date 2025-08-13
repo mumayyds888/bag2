@@ -90,6 +90,10 @@ p {
     color: #fff;
 }
 
+.discover-more {
+    padding: 3rem 0;
+}
+
 .title-section {
     display: flex;
     justify-content: space-between;
@@ -129,7 +133,8 @@ p {
 }
 
 .plus-icon img {
-    width: 30px;
+    width: 20px;
+    margin: 0.1rem 0.5rem 0 0;
 }
 
 .custom-list {
@@ -284,7 +289,7 @@ p {
 }
 
 .content {
-    padding: 2em 1em;
+    padding: 0.5em 1em 2em 1em;
     max-width: 1500px;
     margin: auto;
 }
@@ -591,7 +596,13 @@ video {
     right: 0;
 }
 
+.arrow img {
+    width: 55px;
+}
 
+.arrow2 img {
+    width: 35px;
+}
 
 .app-slide p {
     margin-top: 10px;
@@ -605,11 +616,12 @@ video {
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 60px 40px;
-    min-height: 350px;
+    padding: 60px 40px 60px 40px;
+    max-height: 300px;
     display: flex;
     align-items: center;
     box-sizing: border-box;
+    margin: 4rem 0 0 0;
 }
 
 .consultation .overlay {
@@ -657,48 +669,60 @@ video {
 
 
 .cards {
-    display: flex;
+    /* 這樣寫無法加寬距離 */
+    /* display: flex;
     flex-wrap: wrap;
     gap: 30px;
     padding: 20px;
     box-sizing: border-box;
     justify-content: start;
-    max-width: 100%;
+    max-width: 100%; */
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* 自動等分 */
+    gap: 60px;
+    /* 卡片間距 */
+    width: 100%;
+    /* 撐滿父層 */
+    box-sizing: border-box;
 }
 
 .card {
-    flex: 1 1 calc(33.333% - 20px);
-    /* 3欄布局 */
+    /* flex: 1 1 calc(33.333% - 20px);
     max-width: calc(33.333% - 20px);
     background: #f8f8f8;
     border-radius: 8px;
     overflow: hidden;
-    /* padding: 20px; */
     box-sizing: border-box;
+    text-align: left;
+    transition: box-shadow 0.3s; */
+
+    background: #f8f8f8;
+    overflow: hidden;
     text-align: left;
     transition: box-shadow 0.3s;
 }
 
 .card img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: block;
     margin-bottom: 10px;
 }
 
 .card h4 {
-    margin: 10px 0 5px;
-    font-size: 1.2em;
+    margin: 10px 15px 5px;
+    font-size: 2.2em;
 }
 
 .card p {
-    /* font-size: 1em; */
-    /* color: #444; */
+    margin: 10px 15px 5px;
 }
 
 .card a {
     display: inline-block;
-    margin-top: 15px;
+    margin: 10px 15px 15px;
     color: #f57c00;
     border: 2px solid #f57c00;
     padding: 8px 16px;
@@ -777,6 +801,13 @@ video {
     color: orange;
 }
 
+.footer-CO {
+    padding: 2em 1em;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: right;
+}
+
 /* 麵包屑 */
 .breadcrumb {
     white-space: nowrap;
@@ -809,7 +840,7 @@ video {
 .breadcrumb a {
     text-decoration: none;
     color: #000;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .breadcrumb a:hover {
@@ -833,12 +864,11 @@ video {
     display: grid;
     grid-template-columns: 1.1fr 1fr;
     gap: clamp(20px, 4vw, 48px);
-    align-items: center;
+    align-items: start;
 }
 
 .media {
     margin: 0;
-    border-radius: 12px;
     overflow: hidden;
     background: #e9eef3;
     box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
@@ -936,7 +966,7 @@ video {
     left: 50%;
     right: 50%;
     margin-left: -50vw;
-     margin-right: -50vw;
+    margin-right: -50vw;
     width: 100vw;
 }
 
@@ -974,12 +1004,13 @@ video {
     letter-spacing: .2px;
     font-size: clamp(28px, 4vw, 44px);
     max-width: 1400px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin: 0 16rem;
     display: grid;
-    grid-template-columns: 1.2fr .8fr;
-    gap: clamp(20px, 4vw, 48px);
-    align-items: start;
-    padding: clamp(24px, 4vw, 56px) clamp(16px, 4vw, 40px);
+    /* grid-template-columns: 1.2fr .8fr; */
+    /* gap: clamp(20px, 4vw, 48px); */
+    /* align-items: start; */
+    /* padding: clamp(24px, 4vw, 56px) clamp(16px, 4vw, 40px); */
 }
 
 /* 表單卡片 */
@@ -1107,7 +1138,7 @@ select:focus {
     align-items: start;
     padding: 12px 14px;
     border: 2px solid var(--line, #d9dde3);
-    border-radius: 10px;
+
 }
 
 /* 標題放在最左，跨兩列，頂齊 */
@@ -1397,6 +1428,10 @@ select:focus {
         font-size: 16px;
     }
 
+    .h1_w {
+        line-height: 2.5rem;
+    }
+
     .content {
         padding: 2em 1em;
     }
@@ -1648,9 +1683,9 @@ select:focus {
     }
 
     .card {
-        flex: 1 1 calc(50% - 20px);
+        /* flex: 1 1 calc(50% - 20px); */
         /* 2欄 */
-        max-width: calc(50% - 20px);
+        /* max-width: calc(50% - 20px); */
     }
 
     .site-footer {
@@ -1683,6 +1718,11 @@ select:focus {
     .footer-logo {
         max-width: 100px;
         height: auto;
+    }
+
+    .footer-CO {
+        text-align: center;
+        font-size: 8px;
     }
 
     .arrow {
@@ -1793,6 +1833,9 @@ select:focus {
 
     /* 解除固定位置 */
     /* product_4_list 結束 */
+    .arrow img {
+        width: 35px;
+    }
 }
 
 @media (max-width: 480px) {

@@ -56,10 +56,12 @@ const DATA = [
 ];
 
 const arrow2SVG = `
-      <svg viewBox="0 0 24 24" width="34" height="24" aria-hidden="true">
-        <path d="M5 12h13M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>`;
+      <img src="img/arrow_orange.png" alt="arrow_orange">`;
+// const arrow2SVG = `
+//       <svg viewBox="0 0 24 24" width="34" height="24" aria-hidden="true">
+//         <path d="M5 12h13M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"
+//               stroke-linecap="round" stroke-linejoin="round"/>
+//       </svg>`;
 
 function renderMachineBlocks(data) {
   const host = document.getElementById('machineList');
