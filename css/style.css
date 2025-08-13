@@ -955,6 +955,8 @@ video {
     margin-left: -50vw;
     margin-right: -50vw;
     width: 100vw;
+    display: flex;
+    justify-content: center;
 }
 
 /* 灰色底滿版 */
@@ -968,7 +970,9 @@ video {
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    width: 100vw;
+    width: 100vw;    
+    display: flex;
+    justify-content: center;
 }
 
 .machine-block .media img {
